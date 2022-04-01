@@ -1,0 +1,17 @@
+go to ubuntu website then download ubuntu desktop image or surver file 
+then insert usb
+then format usb using fdisk command
+m for help 
+d
+d 
+partprobe
+then eject usb via sudo eject /dev/sdb
+re insert usb
+now  unmount the usb via the command sudo umount /dev/sdb
+the format the usb via the command sudo mkfs.vfat -I /dev/sdb
+finally using dd command dd if(input file)= downloaded iso.image of(output file)=/dev/sdb
+then take fiw minutes the iso file to convert bootable imagefile now completed
+now check using lsblk command then see sdb
+then unmount /dev/sdb
+terminal say not unmounted
+so every thing ok then eject usb 
